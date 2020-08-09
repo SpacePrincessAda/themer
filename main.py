@@ -108,6 +108,22 @@ highlights = [
   Hi('StatusLineNC', fg=bg1, bg=bg3),
   Hi('NonText', fg=bg3),
 
+  Hi('Error', fg=accent_yellow, bg=accent_red), 
+  Hi('ErrorMsg', fg=accent_yellow, bg=accent_red), 
+  Hi('WarningMsg', fg=accent_yellow, bg=accent_red), 
+
+  Hi('diffAdded', fg=accent_green), 
+  Hi('diffRemoved', fg=accent_red), 
+  Hi('gitcommitSummary', fg=fg2), 
+
+  # Vim Gina Status ANSI colors
+  Hi('AnsiColor1', fg=accent_red), 
+  Hi('AnsiColor2', fg=accent_green), 
+  Hi('AnsiColor3', fg=accent_yellow), 
+  Hi('AnsiColor9', fg=accent_red_dim), 
+  Hi('AnsiColor10', fg=accent_green), 
+  Hi('AnsiColor11', fg=accent_yellow), 
+
   # Stuff like press enter messages, green probs
   Hi('Question', fg=accent_green, bg=bg0), 
   Hi('SpecialKey', fg=fg2, bg=bg0), # misc?
