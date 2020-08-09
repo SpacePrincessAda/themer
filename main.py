@@ -1,6 +1,8 @@
 from base.color import Color
 from write_palette import write_palette
 
+theme_name = 'purple_soft'
+
 bg0 = Color(300, 25, 18)
 bg1 = Color(300, 25, 25)
 bg2 = Color(300, 25, 35)
@@ -22,6 +24,25 @@ accent_red_dim = Color(359, 45, 72)
 accent_yellow = Color(40, 25, 100)
 accent_green = Color(92, 26, 75)
 
+terminal_colors = [
+  bg0.hex,            # 00 - Black
+  accent_red.hex,     # 01 - Red
+  accent_green.hex,   # 02 - Green
+  accent_yellow.hex,  # 03 - Yellow
+  mid0.hex,           # 04 - Blue
+  mid1.hex,           # 05 - Purple
+  accent_teal.hex,    # 06 - Cyan
+  fg2.hex,            # 07 - White
+  bg2.hex,            # 08 - Dim Black
+  accent_red_dim.hex, # 09 - Dim Red
+  accent_green.hex,   # 10 - Dim Green
+  accent_yellow.hex,  # 11 - Dim Yellow
+  mid3.hex,           # 12 - Dim Blue
+  mid2.hex,           # 13 - Dim Purple
+  accent_teal.hex,    # 14 - Dim Cyan
+  fg0.hex,            # 15 - Dim White
+]
+
 all_colors = [
   bg0,
   bg1,
@@ -40,25 +61,6 @@ all_colors = [
   accent_red_dim,
   accent_yellow,
   accent_green,
-]
-
-terminal_colors = [
-  bg0.hex,            # 00 - Black
-  accent_red.hex,     # 01 - Red
-  accent_green.hex,   # 02 - Green
-  accent_yellow.hex,  # 03 - Yellow
-  mid0.hex,           # 04 - Blue
-  mid1.hex,           # 05 - Purple
-  accent_teal.hex,    # 06 - Cyan
-  fg2.hex,            # 07 - White
-  bg2.hex,            # 08 - Dim Black
-  accent_red_dim.hex, # 09 - Dim Red
-  accent_green.hex,   # 10 - Dim Green
-  accent_yellow.hex,  # 11 - Dim Yellow
-  mid3.hex,           # 12 - Dim Blue
-  mid2.hex,           # 13 - Dim Purple
-  accent_teal.hex,    # 14 - Dim Cyan
-  fg0.hex,            # 15 - Dim White
 ]
 
 write_palette(all_colors)
@@ -106,7 +108,7 @@ highlights = [
   Hi('StatusLineNC', fg=bg1, bg=bg3),
   Hi('NonText', fg=bg3),
 
-  # stuff like press enter messages, green probs
+  # Stuff like press enter messages, green probs
   Hi('Question', fg=accent_green, bg=bg0), 
   Hi('SpecialKey', fg=fg2, bg=bg0), # misc?
 
@@ -133,13 +135,17 @@ highlights = [
   Hi('xmlTagName', fg=mid1),
   Hi('xmlTagN', fg=mid1),
 
-  # C Specific
+  # C/C++ Specific
   Hi('cFloat', fg=mid2),
   Hi('cNumber', fg=mid2),
   Hi('cppNumber', fg=mid2),
-]
 
-theme_name = 'purple_soft'
+  # Python Specific
+  Hi('pythonNumber', fg=mid2),
+
+  # VIM Specific
+  Hi('vimNumber', fg=mid2),
+]
 
 vim_header = """\
 hi clear
